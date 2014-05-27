@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mr. Keller's Blog</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/typography.css">
+    <!--
+    The two forward slashes here are not a typo.
+    See: http://stackoverflow.com/questions/9646407/two-forward-slashes-in-a-url-src-href-attribute
+    -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- adds responsiveness to certain elements on the page --> 
+    <script src="javascript/page-functionality.js"></script>
+</head>
+
+<body>
+    <!-- page header --> 
+    <header class="container" id="blog-header">
+        <h1>Mr. Keller's Blog</h1>
+    </header>
+    <!-- navigation bar --> 
+    <nav class="container" id="navbar">
+        <ul>
+            <li><a class="blog-link">Blog</a>
+            </li>
+            <li>
+                <a class="classes-link">My Classes<span class="caret"></span></a>
+                <!-- dropdown menu --> 
+                <div>
+                    <ul>
+                        <li><a class="classes-link">Design</a></li>
+                        <li><a class="classes-link">Computer Art</a></li>
+                        <li><a class="classes-link">Photography</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a class="about-link">About</a></li>
+        </ul>
+    </nav>
+    <!-- posts - will be displayed when page is first loaded or 'Blog' is clicked -->
+    <section class="container blog">
+      <article>
+          <h2>Simple Blog</h2>
+          <p>This is an example of a simple blog. You could adapt this for use as a personal blog, for example. Pay attention to how margin, padding, and width interact to produce the "right" spacing. <a href="http://www.9lessons.info/2013/04/html5-template-design-for-blog.html">The following article</a> is another good guide of how to structure a blog using HTML 5.</p>
+        </article>
+        <article>
+          <h2>HTML5 Semantics</h2>
+          <p>Each blog is an `article`. An `article` is any unit of content that could be published to another website. Think of it like everything that would be put in an article that could be published in a magazine, a newspaper, or a blog.</p>
+          <p>HTML5's biggest difference from HTML4 and earlier is that it provides more tags that more accurately represent the different parts of a web page. For example, the "HTML for blog posts" is contained in a `section` tag, and each blog post is contained in an `article` tag. The semantics of HTML5 tags are more precise and intuitive than earlier versions of HTML, which would represent the "HTML for blog posts" as a `div` containing other `div` tags.</p>
+        </article>
+        <article>
+          <h2>Using jQuery</h2>
+          <p>There's also some basic jQuery here. jQuery is a library that allows web pages to be responsive. This blog creates the effect of switching pages by dynamically showing and hiding different HTML content in response to click events on the anchor tags on the top of the page.</p> 
+          <p> To experience another example of jQuery, click on the "Like" button to see jQuery in action. Press "alt + cmd + j" to open devTools and see more detail of the commands executed in jQuery when clicking the "Like" button. </p>
+          <button>Like</button>
+          <p id="jquery-msg">Alright! You just manipulated the DOM using jQuery! Click on any of the text in this paragraph to hide it and show the Like button again.</p>
+        </article>
+    </section>
+    <!-- about - will be displayed when 'About' is clicked -->
+    <section class="container about">
+        <p>This is an About page. It's shown and hidden using jQuery event listeners on the anchor tags on the nav bar.</p>
+    </section>
+
+    <!-- classes - will be displayed when 'My Classes' is clicked -->
+    <section class="container classes">
+        <p>This is a page of classes that Mr. Keller teaches. It's shown and hidden using jQuery event listeners on the anchor tags on the nav bar.</p>
+        <h3 id="design">Design</h3>
+        <h3 id="computer-art">Computer Art</h3>
+        <h3 id="photography">Photography</h3>
+    </section>
+
+    <footer class="container" id="footer">
+        <div class="copyright">Here's the Footer! Copyright Shane Keller, 2014.</div>
+    </footer>
+        <!-- two column layout, with popular posts in one column -->
+
+</body>
+
+</html>
