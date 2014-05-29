@@ -22,9 +22,9 @@
 body {
     background-color: #EBE8E4;
     color: #222;
-    font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 15px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 header, footer,section,nav {
@@ -33,7 +33,11 @@ header, footer,section,nav {
 
 .container {
     background-color: white;
+
+    /* Specifying auto as the second parameter tells the browser to automatically determine the left and right margins itself, which it does by setting them equally. 'auto' guarantees that the left and right margins will be set to the same size. The first parameter 0 indicates that the top and bottom margins will both be set to 0. */
     margin:0 auto;
+
+    /* read up on how to choose max/min-width here: http://stackoverflow.com/questions/10026751/recommended-widths-for-responsive-layouts */;
     max-width: 750px;
     min-width: 480px;
     font-family:sans-serif;
@@ -44,8 +48,10 @@ section, .container {
     padding: 5px 30px;
 }
 
+/* show a hand cursor when hovering over */ 
 a { 
-    cursor: pointer; cursor: hand; 
+    cursor: pointer; 
+    cursor: hand; 
 }
 
 /*-----------------------------------*/
@@ -62,13 +68,17 @@ header > h1 {
     margin: 0;
 }
 
+header > h1 > a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 /*-----------------------------------*/
 /*         NAVIGATION BAR           */
 /*---------------------------------*/
 #navbar {
     background-color: rgb(47, 47, 105);
-    border: 1px solid #dedede;
-    border-radius: 4px;
     box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
     color: #888;
     display: block;
@@ -108,6 +118,7 @@ nav > ul > li > a > .caret {
 
 nav > ul > li > a {
     color: white;
+    font-weight: bold;
     display: block;
     line-height: 56px;
     padding: 0 24px;
@@ -156,6 +167,7 @@ nav > ul > li > div ul > li {
 
 nav > ul > li > div ul > li > a {
     color: #fff;
+    font-weight: bold;
     display: block;
     padding: 12px 24px;
     text-decoration: none;
@@ -173,6 +185,10 @@ nav > ul > li > div ul > li:hover > a {
     display: none;
 }
 
+article > h2{
+    padding-left: 1em;
+    background-color: #EBE8E4;
+}
 
 /*-----------------------------------*/
 /*             ABOUT                */
