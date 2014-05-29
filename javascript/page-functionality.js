@@ -1,19 +1,28 @@
 $(function(){
-    //show and hide different content based on the link clicked
+    //show and hide different 'pages' based on the link clicked
     $('.blog-link').on('click', function(){
-        $('section').hide();
-        $('.blog').show();
+        $('.container > section').hide();
+        $('#blog').css('display', 'inline-block');
+        $('#blog > article').show();
     }.bind(this));
 
     $('.about-link').on('click', function(){
-        console.log('about clicked');
-        $('section').hide();
-        $('.about').show();
+        $('.container > section').hide();
+        $('#about').css('display', 'inline-block');
     }.bind(this));
 
     $('.classes-link').on('click', function(){
-        $('section').hide();
-        $('.classes').show();
+        $('.container > section').hide();
+        $('#classes').css('display', 'inline-block');
+    }.bind(this));
+
+    //show and hide different blog posts 
+    $('#sidebar li').on('click', function(evt){
+        var href = $(evt.target).attr('href');
+        $('.container > section').hide();
+        $('#blog').css('display', 'inline-block');
+        $('#blog > article').hide();
+        $(href).show();
     }.bind(this));
 
     //click handlers

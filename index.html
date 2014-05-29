@@ -40,38 +40,53 @@
             <li><a class="about-link">About</a></li>
         </ul>
     </nav>
+    <section class="container">
     <!-- posts - will be displayed when page is first loaded or 'Blog' is clicked -->
-    <section class="container blog">
-      <article>
-          <h2>Simple Blog</h2>
-          <p>This is an example of a simple blog. You could adapt this for use as a personal blog, for example. Pay attention to how margin, padding, and width interact to produce the "right" spacing. <a href="http://www.9lessons.info/2013/04/html5-template-design-for-blog.html">The following article</a> is another good guide of how to structure a blog using HTML 5.</p>
-        </article>
-        <article>
-          <h2>HTML5 Semantics</h2>
-          <p>Each blog is an `article`. An `article` is any unit of content that could be published to another website. Think of it like everything that would be put in an article that could be published in a magazine, a newspaper, or a blog.</p>
-          <p>HTML5's biggest difference from HTML4 and earlier is that it provides more tags that more accurately represent the different parts of a web page. For example, the "HTML for blog posts" is contained in a `section` tag, and each blog post is contained in an `article` tag. The semantics of HTML5 tags are more precise and intuitive than earlier versions of HTML, which would represent the "HTML for blog posts" as a `div` containing other `div` tags.</p>
-        </article>
-        <article>
-          <h2>Using jQuery</h2>
-          <p>There's also some basic jQuery here. jQuery is a library that allows web pages to be responsive. This blog creates the effect of switching pages by dynamically showing and hiding different HTML content in response to click events on the anchor tags on the top of the page.</p> 
-          <p> To experience another example of jQuery, click on the "Like" button to see jQuery in action. Press "alt + cmd + j" to open devTools and see more detail of the commands executed in jQuery when clicking the "Like" button. </p>
-          <button>Like</button>
-          <p id="jquery-msg">Alright! You just manipulated the DOM using jQuery! Click on any of the text in this paragraph to hide it and show the Like button again.</p>
-        </article>
-    </section>
-    <!-- about - will be displayed when 'About' is clicked -->
-    <section class="container about">
-        <p>This is an About page. It's shown and hidden using jQuery event listeners on the anchor tags on the nav bar.</p>
-    </section>
+      <section class="content" id="blog">
+        <article id="simple-blog">
+            <h2>Simple Blog</h2>
+              <p>This is an example of a simple blog. You could adapt this for use as a personal blog, for example. Pay attention to how margin, padding, and width interact to produce the "right" spacing. <a href="http://www.9lessons.info/2013/04/html5-template-design-for-blog.html">The following article</a> is another good guide of how to structure a blog using HTML 5.</p>
+          </article>
+          <article id="html5-semantics">
+            <h2>HTML5 Semantics</h2>
+            <section class="post-content">
+              <p>Each blog is an `article`. An `article` is any unit of content that could be published to another website. Think of it like everything that would be put in an article that could be published in a magazine, a newspaper, or a blog.</p>
+              <p>HTML5's biggest difference from HTML4 and earlier is that it provides more tags that more accurately represent the different parts of a web page. For example, the "HTML for blog posts" is contained in a `section` tag, and each blog post is contained in an `article` tag. The semantics of HTML5 tags are more precise and intuitive than earlier versions of HTML, which would represent the "HTML for blog posts" as a `div` containing other `div` tags.</p>
+            </section>
+          </article>
+          <article id="using-jquery">
+            <h2>Using jQuery</h2>
+            <section class="post-content">
+              <p>There's also some basic jQuery here. jQuery is a library that allows web pages to be responsive. This blog creates the effect of switching pages by dynamically showing and hiding different HTML content in response to click events on the anchor tags on the top of the page.</p> 
+              <p> To experience another example of jQuery, click on the "Like" button to see jQuery in action. Press "alt + cmd + j" to open devTools and see more detail of the commands executed in jQuery when clicking the "Like" button. </p>
+              <button>Like</button>
+              <p id="jquery-msg">Alright! You just manipulated the DOM using jQuery! Click on any of the text in this paragraph to hide it and show the Like button again.</p>
+            </section>
+          </article>
+      </section>
+      <!-- about - will be displayed when 'About' is clicked -->
+      <section class="content" id="about">
+          <p>This is an About page. It's shown and hidden using jQuery event listeners on the anchor tags on the nav bar.</p>
+      </section>
 
-    <!-- classes - will be displayed when 'My Classes' is clicked -->
-    <section class="container classes">
-        <p>This is a page of classes that Mr. Keller teaches. It's shown and hidden using jQuery event listeners on the anchor tags on the nav bar.</p>
-        <h3 id="design">Design</h3>
-        <h3 id="computer-art">Computer Art</h3>
-        <h3 id="photography">Photography</h3>
-    </section>
+      <!-- classes - will be displayed when 'My Classes' is clicked -->
+      <section class="content" id="classes">
+          <p>This is a page of classes that Mr. Keller teaches. It's shown and hidden using jQuery event listeners on the anchor tags on the nav bar.</p>
+          <h3 id="design">Design</h3>
+          <h3 id="computer-art">Computer Art</h3>
+          <h3 id="photography">Photography</h3>
+      </section>
 
+      <!-- sidebar -->
+      <aside id="sidebar">
+        <h4>Recent Blog Posts</h4>
+        <ul>
+          <li><a href="#simple-blog">Simple Blog</a></li>
+          <li><a href="#html5-semantics">HTML5</a></li>
+          <li><a href="#using-jquery">Using jQuery</a></li>
+        </ul>
+      </aside>
+    </section>
     <footer class="container" id="footer">
         <div class="copyright">Here's the Footer! Copyright Shane Keller, 2014.</div>
     </footer>

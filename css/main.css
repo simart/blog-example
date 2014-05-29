@@ -32,26 +32,37 @@ header, footer,section,nav {
 }
 
 .container {
-    background-color: white;
 
     /* Specifying auto as the second parameter tells the browser to automatically determine the left and right margins itself, which it does by setting them equally. 'auto' guarantees that the left and right margins will be set to the same size. The first parameter 0 indicates that the top and bottom margins will both be set to 0. */
     margin:0 auto;
 
     /* read up on how to choose max/min-width here: http://stackoverflow.com/questions/10026751/recommended-widths-for-responsive-layouts */;
-    max-width: 750px;
-    min-width: 480px;
+    max-width: 960px;
+    min-width: 768px;
     font-family:sans-serif;
     margin-top:20px;
 }
 
-section, .container {
-    padding: 5px 30px;
+section.container {
+    padding: 5px 0;
 }
 
-/* show a hand cursor when hovering over */ 
+.content {
+    background-color: white;
+    display: inline-block;
+    width: 70%;
+    padding: 0 30px;
+}
+
+/* show a hand cursor when hovering over element */ 
 a { 
     cursor: pointer; 
     cursor: hand; 
+}
+
+li > a {
+    text-decoration: none;
+    color: black;
 }
 
 /*-----------------------------------*/
@@ -170,7 +181,6 @@ nav > ul > li > div ul > li > a {
     font-weight: bold;
     display: block;
     padding: 12px 24px;
-    text-decoration: none;
 }
 
 nav > ul > li > div ul > li:hover > a {
@@ -181,20 +191,29 @@ nav > ul > li > div ul > li:hover > a {
 /*             POSTS                */
 /*---------------------------------*/
 
-#jquery-msg{
+#jquery-msg {
     display: none;
 }
 
-article > h2{
+article > h2 {
     padding-left: 1em;
-    background-color: #EBE8E4;
+    border-bottom: 1px dotted #999999;  
 }
+
+/* show article preview
+   hide article body */
+/*.post-content{
+    height: 4.6875rem;
+    overflow: hidden;
+    text-overflow: ellipses;
+}
+*/
 
 /*-----------------------------------*/
 /*             ABOUT                */
 /*---------------------------------*/
 
-section, .classes {
+section#classes {
     display: none;
 }
 
@@ -202,15 +221,37 @@ section, .classes {
 /*             CLASSES              */
 /*---------------------------------*/
 
-section, .about {
+section#about {
     display: none;
+}
+
+/*-----------------------------------*/
+/*             SIDEBAR              */
+/*---------------------------------*/
+
+#sidebar {
+    width: 25%;
+    display: inline-block;
+    float: right;
+    vertical-align: top;
+    background-color: white;
+    padding: 0 30px;
+}
+
+#sidebar > h4 {
+    text-align: center;
+    font-weight: bold;
+}
+
+#sidebar li {
+    list-style-type: none;
 }
 
 /*-----------------------------------*/
 /*              FOOTER              */
 /*---------------------------------*/
 
-#footer{
+#footer {
     margin-top: 0;   
     border-top: 1px dotted #999999;
     padding: 1em 0; 
