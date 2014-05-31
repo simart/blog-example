@@ -1,37 +1,59 @@
+/* should you use px, em, or rem?: http://stackoverflow.com/questions/11799236/should-i-use-px-or-rem-in-my-css 
+
+use gridlover to choose relative font sizes: http://www.gridlover.net/app/;
+*/
+
 body {
-  font-size: 1.125rem;
-  line-height: 1.6875rem;
-  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 auto;
 }
-
-h1, h2, h3, h4 {
-  font-weight: 300;
-}
-
 h1 {
-  font-size: 2.1875rem;
-  line-height: 3.375rem;
-  margin: 1.6875rem 0;
+  font-size: 66px;
+  line-height: 80px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
-
 h2 {
-  font-size: 1.75rem;
-  line-height: 3.375rem;
-  margin: 1.6875rem 0;
+  font-size: 41px;
+  line-height: 60px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
-
 h3 {
-  font-size: 1.4375rem;
-  line-height: 1.6875rem;
-  margin: 1.6875rem 0;
+  font-size: 26px;
+  line-height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-
 h4 {
-  font-size: 1.125rem;
-  line-height: 1.6875rem;
-  margin: 1.6875rem 0;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+p, ul, ol, pre, table, blockquote {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-p, ul, ol, pre, table, blockquote {
-  margin: 1.6875rem 0;
+/* Sanitation */
+hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+b, strong, em, small, code {
+  line-height: 1;
+}
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+sub {
+  top: 0.4em;
 }

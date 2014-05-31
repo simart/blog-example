@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>Mr. Keller's Blog</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/typography.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <!--
     The two forward slashes here are not a typo.
     See: http://stackoverflow.com/questions/9646407/two-forward-slashes-in-a-url-src-href-attribute
@@ -45,29 +45,24 @@
       <section class="content" id="blog">
         <article id="simple-blog">
             <h2><a href="#simple-blog">Simple Blog</a></h2>
-              <p>This is an example of a simple blog. You could adapt this for use as a personal blog, for example. Pay attention to how margin, padding, and width interact to produce the "right" spacing. <a href="http://www.9lessons.info/2013/04/html5-template-design-for-blog.html">The following article</a> is another good guide of how to structure a blog using HTML 5.</p>
+            <p class="preview">This is an example of a simple blog. You could adapt this for use as a personal blog, for example. Pay attention to how margin, padding, and width interact to produce the "right" spacing.<span class="read-more">...Read more>></span></p>
+            <p><a href="http://www.9lessons.info/2013/04/html5-template-design-for-blog.html">The following article</a> is another good guide of how to structure a blog using HTML 5.</p>
           </article>
           <article id="html5-semantics">
             <h2><a href="#html5-semantics">HTML5 Semantics</a></h2>
-            <section class="post-content">
-              <p>Each blog is an `article`. An `article` is any unit of content that could be published to another website. Think of it like everything that would be put in an article that could be published in a magazine, a newspaper, or a blog.</p>
-              <p>HTML5's biggest difference from HTML4 and earlier is that it provides more tags that more accurately represent the different parts of a web page. For example, the "HTML for blog posts" is contained in a `section` tag, and each blog post is contained in an `article` tag. The semantics of HTML5 tags are more precise and intuitive than earlier versions of HTML, which would represent the "HTML for blog posts" as a `div` containing other `div` tags.</p>
-            </section>
+            <p class="preview">Each blog is an `article`. An `article` is any unit of content that could be published to another website. Think of it like everything that would be put in an article that could be published in a magazine, a newspaper, or a blog.<span class="read-more">...Read more>></span></p>
+            <p>HTML5's biggest difference from HTML4 and earlier is that it provides more tags that more accurately represent the different parts of a web page. For example, the "HTML for blog posts" is contained in a `section` tag, and each blog post is contained in an `article` tag. The semantics of HTML5 tags are more precise and intuitive than earlier versions of HTML, which would represent the "HTML for blog posts" as a `div` containing other `div` tags.</p>
           </article>
           <article id="using-jquery">
             <h2><a href="#using-jquery">Using jQuery</a></h2>
-            <section class="post-content">
-              <p>There's also some basic jQuery here. jQuery is a library that allows web pages to be responsive. This blog creates the effect of switching pages by dynamically showing and hiding different HTML content in response to click events on the anchor tags on the top of the page.</p> 
-              <p> To experience another example of jQuery, click on the "Like" button to see jQuery in action. Press "alt + cmd + j" to open devTools and see more detail of the commands executed in jQuery when clicking the "Like" button. </p>
-              <button>Like</button>
-              <p id="jquery-msg">Alright! You just manipulated the DOM using jQuery! Click on any of the text in this paragraph to hide it and show the Like button again.</p>
-            </section>
+            <p class="preview">There's also some basic jQuery here. jQuery is a library that allows web pages to be responsive. This blog creates the effect of switching pages by dynamically showing and hiding different HTML content in response to click events on the anchor tags on the top of the page.<span class="read-more">...Read more>></span></p> 
+            <p> To experience another example of jQuery, click on the "Like" button to see jQuery in action. Press "alt + cmd + j" to open devTools and see more detail of the commands executed in jQuery when clicking the "Like" button. </p>
+            <button>Like</button>
+            <p id="jquery-msg">Alright! You just manipulated the DOM using jQuery! Click on any of the text in this paragraph to hide it and show the Like button again.</p>
           </article>
           <article id="html5-canvas">
             <h2><a href="#html5-canvas">HTML5 Canvas</a></h2>
-            <section class="post-content">
-              
-            </section>
+              <p>Add a new post here.</p>
           </article>
       </section>
       <!-- about - will be displayed when 'About' is clicked -->
@@ -91,7 +86,7 @@
         <h4>Blog Posts</h4>
         <ul>
           <li><a href="#simple-blog">Simple Blog</a></li>
-          <li><a href="#html5-semantics">HTML5</a></li>
+          <li><a href="#html5-semantics">HTML5 Semantics</a></li>
           <li><a href="#using-jquery">Using jQuery</a></li>
           <li><a href="#html5-canvas">HTML5 Canvas</a></li>
         </ul>

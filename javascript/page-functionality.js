@@ -2,8 +2,13 @@ $(function(){
     //event handlers
     var showBlog = function(){
         $('.container > section').hide();
+        $('article > p').hide();
         $('#blog').css('display', 'inline-block');
+
+        //only show previews of blog articles
         $('#blog > article').show();
+        $('article > .preview').show();
+        $('.read-more').show();
     }.bind(this);
 
     var showAbout = function(){
@@ -20,6 +25,10 @@ $(function(){
         var el = $(evt.target);
         if(el.prop('tagName') === 'A'){
             var articleId = el.attr('href');
+        }else if(el.prop('tagName') === 'SPAN'){
+            el.hide();
+            el.parent().siblings('p').show();
+            var articleId = el.parent().siblings('h2').children(0).attr('href');
         }else{
             var articleId = el.children(0).attr('href');
         }
@@ -47,9 +56,10 @@ $(function(){
     $('.about-link').on('click', showAbout);
     $('.classes-link').on('click', showClasses);
 
-    //show and hide different blog posts 
+    //go to a 'page' containing a single blog post
     $('#sidebar li').on('click', followLink);
     $('article h2').on('click', followLink);
+    $('article .preview').on('click', followLink);
 
     //show and hide jQuery message
     $('button').on('click', fakeServerReq);

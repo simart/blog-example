@@ -7,6 +7,7 @@
     - ABOUT
     - CLASSES
     - FOOTER 
+    - MOBILE
 /*
 /*================================================================*/
 
@@ -35,10 +36,8 @@ header, footer,section,nav {
 
     /* Specifying auto as the second parameter tells the browser to automatically determine the left and right margins itself, which it does by setting them equally. 'auto' guarantees that the left and right margins will be set to the same size. The first parameter 0 indicates that the top and bottom margins will both be set to 0. */
     margin:0 auto;
-
     /* read up on how to choose max/min-width here: http://stackoverflow.com/questions/10026751/recommended-widths-for-responsive-layouts */;
     max-width: 960px;
-    min-width: 768px;
     font-family:sans-serif;
     margin-top:20px;
 }
@@ -216,6 +215,7 @@ nav > ul > li > div ul > li:hover > a {
 /*             POSTS                */
 /*---------------------------------*/
 
+
 #jquery-msg {
     display: none;
 }
@@ -224,18 +224,29 @@ article > h2 {
     border-bottom: 1px dotted #999999; 
 }
 
-h2 > a:hover {
-    color: blue;
+article p {
+    display: none;
 }
 
-/* show article preview
-   hide article body */
-/*.post-content{
-    height: 4.6875rem;
-    overflow: hidden;
-    text-overflow: ellipses;
+.preview {
+    display: inline;
 }
-*/
+
+.read-more {
+    font-weight: bold;
+    cursor: hand;
+    cursor: pointer;
+}
+
+h2 > a:hover {
+    text-decoration: underline;
+}
+
+#jquery-msg:hover {
+    text-decoration: underline;
+    cursor: hand;
+    cursor: pointer;
+}
 
 /*-----------------------------------*/
 /*             ABOUT                */
@@ -296,3 +307,84 @@ section#about {
     text-align: center;
 }
 
+/*-----------------------------------*/
+/*              MOBILE              */
+/*---------------------------------*/
+
+/* "If [device width] is less than or equal to 768px, then do {...}" 
+    useful article on media queries: http://unmatchedstyle.com/news/working-with-media-queries-and-min-width.php;
+*/
+
+@media (max-width: 768px) {
+
+    /* keeps content accessible to screen readers */
+    #sidebar {
+       position: absolute !important;
+       top: -9999px !important;
+       left: -9999px !important;
+    }
+
+    section.container {
+        padding: 5px 25px;
+    }
+
+    .content {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    body {
+      font-size: 12px;
+      line-height: 12px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 31px;
+      line-height: 36px;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-size: 23px;
+      line-height: 24px;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+    h3 {
+      font-size: 17px;
+      line-height: 24px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+    h4 {
+      font-size: 12px;
+      line-height: 12px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+    p, ul, ol, pre, table, blockquote {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+
+    /* Sanitation */
+    hr {
+      border: 1px solid;
+      margin: -1px 0;
+    }
+    ul ul, ol ol, ul ol, ol ul {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    b, strong, em, small, code {
+      line-height: 1;
+    }
+    sup, sub {
+      vertical-align: baseline;
+      position: relative;
+      top: -0.4em;
+    }
+    sub {
+      top: 0.4em;
+    }
+}
