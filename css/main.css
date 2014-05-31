@@ -317,6 +317,10 @@ section#about {
 
 @media (max-width: 768px) {
 
+    header {
+        height: 100px;
+    }
+
     /* keeps content accessible to screen readers */
     #sidebar {
        position: absolute !important;
