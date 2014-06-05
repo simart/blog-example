@@ -28,7 +28,7 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-header, footer,section,nav {
+header, footer, section, nav {
     display:blocks;
 }
 
@@ -96,13 +96,7 @@ header:before {
     margin-top: 0;
 }
 
-/*header > h1 {
-    display: table-cell;
-    vertical-align: middle;
-    margin: 0;
-}*/
-
-header > h1 > a {
+#blog-header-text > a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -125,7 +119,7 @@ nav ul {
     padding: 0;
 }
 
-nav ul li {
+.nav-item {
     cursor: pointer;
     display: inline-block;
     list-style-type: none;
@@ -136,7 +130,7 @@ nav ul li {
     transition: all 0.2s;
 }
 
-nav > ul > li > a > .caret {
+.caret {
     border-top: 4px solid #aaa;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
@@ -151,7 +145,7 @@ nav > ul > li > a > .caret {
     transition: color 0.1s linear;
 }
 
-nav > ul > li > a {
+.nav-item > a {
     color: white;
     font-weight: bold;
     display: block;
@@ -160,19 +154,19 @@ nav > ul > li > a {
     text-decoration: none;
 }
 
-nav > ul > li:hover {
+.nav-item:hover {
     background-color: rgb(40, 44, 47);
 }
 
-nav > ul > li:hover > a {
+.nav-item:hover > a {
     color: rgb(255, 255, 255);
 }
 
-nav > ul > li:hover > a > .caret {
+.nav-item:hover > a > .caret {
     border-top-color: rgb(255, 255, 255);
 }
 
-nav > ul > li > div {
+.nav-item > div {
     background-color: rgb(40, 44, 47);
     border-top: 0;
     border-radius: 0 0 4px 4px;
@@ -190,24 +184,24 @@ nav > ul > li > div {
     -transition: opacity 0.2s;
 }
 
-nav > ul > li:hover > div {
+.nav-item:hover > div {
     display: block;
     opacity: 1;
     visibility: visible;
 }
 
-nav > ul > li > div ul > li {
+.nav-dropdown-item {
     display: block;
 }
 
-nav > ul > li > div ul > li > a {
+.nav-dropdown-item > a {
     color: #fff;
     font-weight: bold;
     display: block;
     padding: 12px 24px;
 }
 
-nav > ul > li > div ul > li:hover > a {
+.nav-dropdown-item:hover > a {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
